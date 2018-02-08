@@ -8,7 +8,7 @@ def withdraw(request):
         return
     
     for e in pnv:
-        while request > e:
+        while request >= e:
             print 'Give ' + str(e)
             request -= e
             balance -= e
@@ -18,7 +18,7 @@ def withdraw(request):
     print
     print 'Your balance is: ' + str(balance)
 
-withdraw(127)
+withdraw(450)
 
             
             
