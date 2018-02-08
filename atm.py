@@ -1,8 +1,7 @@
 """docstring"""
-
-def withdraw(request):
+balance=500
+def withdraw(balance,request):
     pnv = [100,50,20,10,5]
-    balance = 500
     if request > balance:
         print 'Balance is not sufficient'
         return
@@ -15,10 +14,10 @@ def withdraw(request):
     if request > 0:
         print 'Give ' + str(request)
     balance -= request
-    print
-    print 'Your balance is: ' + str(balance)
+    return balance
 
-withdraw(450)
+balance = withdraw(balance,500)
+print "balance: " + str(balance)
 
             
             
