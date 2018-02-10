@@ -5,8 +5,8 @@ def is_valid_operation(balance, request):
     result = False
     if request < 0:
         print "Request value must be greater than 0"
-    elif balance>=request:
-        result=True
+    elif balance >= request:
+        result = True
     elif request > balance:
         print "balance is not sufficient"
     return result
