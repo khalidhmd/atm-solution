@@ -11,22 +11,24 @@ def is_valid_operation(balance, request):
         print "balance is not sufficient"
     return result
 
+def output_msg(msg):
+    if msg > 0:
+        print 'Give {}'.format(msg)
+
 
 def withdraw(balance, request):
-    pnv = [100,50,20,10,5]
+    bank_note_values = [100, 50, 20, 10, 5, 1]
     if is_valid_operation(balance, request):
-        for e in pnv:
-            while request >= e:
-                print 'Give ' + str(e)
-                request -= e
-                balance -= e
-        if request > 0:
-            print 'Give ' + str(request)
+        for value in bank_note_values:
+            while request >= value:
+                output_msg(value)
+                request -= value
+                balance -= value
         balance -= request
     return balance
 
-balance = withdraw(balance,-1)
-print "balance: " + str(balance)
+balance = withdraw(balance,333)
+
 
             
             
